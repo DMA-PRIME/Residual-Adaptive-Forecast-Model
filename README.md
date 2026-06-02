@@ -24,7 +24,7 @@ The raw data files are not included in this repository. Each notebook expects th
 | `data/MUSC.csv` | Weekly MUSC encounter, diagnosis, testing, admission, outpatient, ED, and vaccination indicators. |
 | `data/PRISMA.csv` | Weekly PRISMA encounter, diagnosis, testing, admission, outpatient, ED, and vaccination indicators. |
 
-### Feature Selection
+## Feature Selection
 
 The T+1, T+2, T+3, and T+4 forecasting notebooks use different selected feature sets, so each horizon-specific model is trained with a different number of raw and engineered features.
 
@@ -34,11 +34,11 @@ Feature selection is performed in stages:
 - **VIF score:** The selected feature set is then screened with variance inflation factor diagnostics to reduce multicollinearity among predictors.
 - **Fixed features:** Some clinically important features are force-included no matter what their VIF scores are.
 
-### Feature Engineering
+## Feature Engineering
 
 The notebooks engineer time-series features from the selected exogenous variables and observed target history. Because each horizon uses a different selected feature set, the feature-engineering stage produces a different number of final model features for each model.
 
-### Modeling
+## Modeling
 
 The primary estimator is `xgboost.XGBRegressor`. Bayesian optimization through Optuna is used to search for the best hyperparameter combination for each model. 
 
