@@ -46,7 +46,7 @@ The primary estimator is `xgboost.XGBRegressor`. Bayesian optimization through O
 
 The notebooks report:
 - Percent agreement (PA), defined as the mean of `min(actual, predicted) / max(actual, predicted)`.
-- 
+  
 ## Complete Pipeline at a glance:
 
 1. Load `CDC.csv`, `MUSC.csv`, and `PRISMA.csv` from `data/`.
