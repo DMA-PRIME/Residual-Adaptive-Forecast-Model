@@ -46,7 +46,7 @@ The primary estimator is `xgboost.XGBRegressor`. Bayesian optimization through O
 
 The notebooks report:
 - Percent agreement (PA), defined as the mean of `min(actual, predicted) / max(actual, predicted)`.
-
+- 
 ## Complete Pipeline at a glance:
 
 1. Load `CDC.csv`, `MUSC.csv`, and `PRISMA.csv` from `data/`.
@@ -58,7 +58,7 @@ The notebooks report:
 7. Engineer time-series features from selected exogenous variables and observed target history.
 8. Split data chronologically into train, embargo gap, and hold-out test partitions.
 9. Tune `XGBRegressor` with Optuna using time-series cross-validation.
-10. Evaluate final hold-out predictions with MAE and percent agreement.
+10. Evaluate final hold-out predictions with percent agreement and use previous history of prediction to make better forecasting.
 
 ## Main Python Libraries
 
