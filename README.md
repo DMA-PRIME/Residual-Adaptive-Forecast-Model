@@ -1,6 +1,6 @@
-# FLU Forecasting With Traditional Models
+# Residual Adaptive Forecast Model
 
-This repository contains notebook-based influenza forecasting experiments using traditional feature engineering and machine learning workflows.
+This repository contains a notebook-based influenza admissions forecasting pipeline built around classical+novel time-series feature engineering, mutual-information feature ranking, multicollinearity screening, Bayesian Optimization, and XGBoost regression. The project compares one-step through four-step ahead forecasting of CDC influenza admissions using merged weekly surveillance and hospital-system indicators from CDC, MUSC, and PRISMA-style data sources.
 
 ## Project Contents
 
